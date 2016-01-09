@@ -5,13 +5,13 @@ import java.util.Set;
 
 import javax.ws.rs.core.Application;
 
-import app.jz.MessageRestService;
+import app.jz.rest.UserServiceImpl;
 
-public class MessageApplication extends Application {
+public class MyApplication extends Application {
 	private Set<Object> singletons = new HashSet<Object>();
 
-	public MessageApplication() {
-		singletons.add(new MessageRestService());
+	public MyApplication() {
+		singletons.add(new UserServiceImpl());
 	}
 
 	@Override
